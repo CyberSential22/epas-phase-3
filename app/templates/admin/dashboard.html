@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Dashboard - Event Planner{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Administrator Dashboard</h1>
+</div>
+
+<div class="stats-row">
+    <div class="stat-card">
+        <span class="stat-label">Pending Approvals</span>
+        <span class="stat-value">12</span>
+    </div>
+    <div class="stat-card">
+        <span class="stat-label">Active Events</span>
+        <span class="stat-value">05</span>
+    </div>
+    <div class="stat-card">
+        <span class="stat-label">Total Users</span>
+        <span class="stat-value">48</span>
+    </div>
+</div>
+
+<div class="card mt-4">
+    <h3>Recent Submission Queue</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Submitted By</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#1001</td>
+                <td>Guest Lecture on AI</td>
+                <td>Dr. Sarah Connor</td>
+                <td><span class="badge badge-pending">Pending</span></td>
+                <td><a href="#" class="btn btn-sm">Review</a></td>
+            </tr>
+            <tr>
+                <td>#1002</td>
+                <td>Robotics Workshop</td>
+                <td>James Dean</td>
+                <td><span class="badge badge-approved">Approved</span></td>
+                <td><a href="#" class="btn btn-sm">Details</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div
+    style="max-width: 800px; margin: 0 auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <h1>Welcome, {{ current_user.username }}!</h1>
+    <p>You are logged in as: <strong>{{ role }}</strong></p>
+
+    <hr style="margin: 20px 0; border: none; border-top: 1px solid #e2e8f0;">
+
+    <div style="margin-top: 20px;">
+        {% if role == 'Student' %}
+        <h2>Student Dashboard</h2>
+        <p>Here you can view the status of your submitted events.</p>
+        <a href="{{ url_for('events.create_event') }}"
+            style="display: inline-block; padding: 10px 20px; background-color: var(--primary); color: white; text-decoration: none; border-radius: 4px; margin-top: 10px;">Submit
+            a New Event</a>
+
+        {% elif role == 'Faculty' %}
+        <h2>Faculty Dashboard</h2>
+        <p>Pending Approvals:</p>
+        <ul>
+            <li>No pending approvals found.</li>
+        </ul>
+
+        {% elif role == 'DeptHead' %}
+        <h2>Department Head Dashboard</h2>
+        <p>Pending Approvals:</p>
+        <ul>
+            <li>No pending approvals found.</li>
+        </ul>
+
+        {% elif role == 'Admin' %}
+        <h2>Administrator Dashboard</h2>
+        <p>System Overview:</p>
+        <ul>
+            <li>Manage Users</li>
+            <li>System Settings</li>
+        </ul>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

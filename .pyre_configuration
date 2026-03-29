@@ -1,0 +1,7 @@
+{
+  "source_directories": [
+    "."
+  ],
+  "binary": "venv/Scripts/python.exe",
+  "search_path": ["venv/Lib/site-packages"]
+}

@@ -1,0 +1,9 @@
+[tool.pyright]
+include = ["app"]
+exclude = ["venv", "**/__pycache__"]
+executionEnvironments = [
+  { root = "." }
+]
+
+[tool.pylance]
+"python.analysis.extraPaths" = ["."]

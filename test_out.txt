@@ -1,0 +1,76 @@
+[2026-03-14 15:52:48,923] INFO in logger: Event Planner System Startup
+[2026-03-14 15:52:48,923] INFO in logger: Event Planner System Startup
+Traceback (most recent call last):
+Check 1 Passed: Password hashing
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1810, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1455, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1141, in process
+    raise TypeError(
+TypeError: SQLite Date type only accepts Python date objects as input.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\test_phase3.py", line 34, in <module>
+    db.session.commit()
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\orm\scoping.py", line 554, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1923, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1239, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1214, in _prepare_impl
+    self.session.flush()
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4179, in flush
+    self._flush(objects)
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4314, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4275, in _flush
+    flush_context.execute()
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1226, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1412, in execute
+    return meth(
+           ^^^^^
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1816, in _execute_context
+    self._handle_dbapi_exception(
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2339, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1810, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1455, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "D:\EDUCATION\Work\SDLC Project\Event Planner and Approval System - Phase 3\venv\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 1141, in process
+    raise TypeError(
+sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite Date type only accepts Python date objects as input.
+[SQL: INSERT INTO events (title, description, event_date, start_time, end_time, venue, event_type, audience_type, audience_size, is_external_audience, requires_projector, requires_microphone, requires_live_streaming, technical_requirements, requires_security, security_requirements, budget, budget_breakdown, status, rejection_reason, created_by, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: [{'description': 'Just a test', 'venue': 'Room A', 'end_time': '2026-04-01 12:00:00', 'title': 'Test Event', 'created_by': 1, 'event_date': '2026-04-01 ... (4 characters truncated) ... start_time': '2026-04-01 10:00:00', 'technical_requirements': None, 'rejection_reason': None, 'security_requirements': None, 'budget_breakdown': None}]]

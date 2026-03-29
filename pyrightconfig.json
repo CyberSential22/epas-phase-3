@@ -1,0 +1,10 @@
+{
+  "include": ["app", ".", "test_phase3.py"],
+  "exclude": ["venv", "**/__pycache__"],
+  "venvPath": ".",
+  "venv": "venv",
+  "extraPaths": ["."],
+  "reportMissingImports": true,
+  "reportMissingTypeStubs": false,
+  "pythonVersion": "3.12"
+}
